@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Formulario en HTML</title>
     <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/funciones.js"> </script>
   </head>
   <body>
       <header>
@@ -11,14 +12,39 @@
       </header>
       <nav></nav>
       <section>
-        <form action="#" method="post" name="formm1" id="form1">
+        <form method="post" name="formm1" id="form1">
         <div id="datosGenerales">
+          <h2>Datos Generales</h2>
           <p><label for="clave">Cve. Empleado</label>
-          <input type="text" name="clave" id="clave" size="5" maxlength="5" placeholder="Clave">
+          <input type="text" name="clave" id="clave" size="8" maxlength="5" placeholder="Alfanumérico" required>
+          </p>
+          <p><label for="nombre">Nombre</label>
+          <input type="text" name="nombre" id="nombre" size="20" maxlength="50" placeholder="Nombre(s)" required>
+          </p>
+          <p><label for="apellido">Apellido</label>
+          <input type="text" name="apellido" id="apellido" size="20" maxlength="80" placeholder="Apellido(s)" required>
+          </p>
+        </div>
+        <div id="datosTrabajo">
+          <h2>Datos Trabajo</h2>
+          <p>
+            <label for="salario">Salario</p>
+            <input type="number" class="numero" name="salario" id="salario" size="10" maxlength="10" placeholder="Mayor a cero" required onchange="calcularNomina()">
+          </p>
+          <p>
+            <label for="dias">Días Trabajados</p>
+            <input type="number" class="numero" name="dias" id="dias" size="5" maxlength="8" value = "15" placeholder="15" required onchange="calcularNomina()">
+          </p>
+        </div>
+        <div id="nomina">
+          <h2>Nómina</h2>
+          <p>
+            <label for="importe">Importe</label>
+            <input type="text" class="numero" name="importe" id="importe" size="10" readonly>
           </p>
         </div>
         <div id="botones">
-          <p><input type="submit" name="enviar" id="enviar" value="Enviar">
+          <p><button onclick="calcularNomina()">Enviar</button>
           <input type="reset" name="limpiar" id="limpiar" value="Limpiar"></p>
         </div>
       </form>

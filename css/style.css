@@ -1,3 +1,8 @@
 h1 {text-align:center;}
-#datosGenerales {background-color: #00ff00; width: 30%;}
-#botones {background-color: #ffffff; width: 30%;}
+h2 {text-align: center;}
+#datosGenerales {background-color: #00ff00; width: 50%;}
+#datosTrabajo {background-color: #00ffff; width: 50%;}
+#nomina {background-color: #0000ff; width: 50%; color: yellow;}
+#botones {background-color: #ffffff; width: 50%; text-align: right;}
+
+.numero {text-align: right;}
