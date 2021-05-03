@@ -12,7 +12,7 @@
       </header>
       <nav></nav>
       <section>
-        <form method="post" name="formm1" id="form1">
+<!--        <form method="post" name="formm1" id="form1"> -->
         <div id="datosGenerales">
           <h2>Datos Generales</h2>
           <p><label for="clave">Cve. Empleado</label>
@@ -28,7 +28,7 @@
         <div id="datosTrabajo">
           <h2>Datos Trabajo</h2>
           <p>
-            <label for="salario">Salario</p>
+            <label for="salario">Salario $</p>
             <input type="number" class="numero" name="salario" id="salario" size="10" maxlength="10" placeholder="Mayor a cero" required onchange="calcularNomina()">
           </p>
           <p>
@@ -39,15 +39,15 @@
         <div id="nomina">
           <h2>Nómina</h2>
           <p>
-            <label for="importe">Importe</label>
+            <label for="importe">Importe $</label>
             <input type="text" class="numero" name="importe" id="importe" size="10" readonly>
           </p>
         </div>
         <div id="botones">
-          <p><button onclick="calcularNomina()">Enviar</button>
+          <p><button onclick="calcularNomina()">Calcular</button>
           <input type="reset" name="limpiar" id="limpiar" value="Limpiar"></p>
         </div>
-      </form>
+<!--      </form> -->
     </section>
       <footer></footer>
   </body>
