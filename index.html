@@ -28,13 +28,17 @@
         <div id="datosTrabajo">
           <h2>Datos Trabajo</h2>
           <p>
-            <label for="salario">Salario $</p>
+            <label for="salario">Salario $</label>
             <input type="number" class="numero" name="salario" id="salario" size="10" maxlength="10" placeholder="Mayor a cero" required onchange="calcularNomina()">
           </p>
           <p>
-            <label for="dias">Días Trabajados</p>
+            <label for="dias">Días Trabajados</label>
             <input type="number" class="numero" name="dias" id="dias" size="5" maxlength="8" value = "15" placeholder="15" required onchange="calcularNomina()">
           </p>
+          <label for="tipo"><p>Tipo Empleado</p>
+                <p><input type="radio" name="tipo" id="tipo" value="A" checked onchange="calcularNomina()">Administrativo</p>
+                <p><input type="radio" name="tipo" id="tipo" value="O" onchange="calcularNomina()">Operativo</p>
+          </label>
         </div>
         <div id="nomina">
           <h2>Nómina</h2>
