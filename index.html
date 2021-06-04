@@ -10,7 +10,7 @@
       <header>
         <h1>Formulario</h1>
       </header>
-      <nav></nav>
+      <nav> <!-- Aquí va el menú --> </nav>
       <section>
 <!--        <form method="post" name="formm1" id="form1"> -->
         <div id="datosGenerales">
@@ -36,7 +36,6 @@
             <label>Fútbol<input type="checkbox" name="futbol" id="futbol"></label>
             <label>Lectura<input type="checkbox" name="lectura" id="lectura"></label>
           </p>
-
           </p>
         </div>
         <div id="datosTrabajo">
@@ -49,10 +48,9 @@
             <label for="dias">Días Trabajados</label>
             <input type="number" class="numero" name="dias" id="dias" size="5" maxlength="8" value = "15" placeholder="15" required onchange="calcularNomina()">
           </p>
-          <label for="tipo"><p>Tipo Empleado</p>
-                <p><input type="radio" name="tipo" id="tipo" value="A" checked onchange="calcularNomina()">Administrativo</p>
-                <p><input type="radio" name="tipo" id="tipo" value="O" onchange="calcularNomina()">Operativo</p>
-          </label>
+          <p>Tipo Empleado</p>
+                <p><label><input type="radio" name="tipo" id="tipo" value="A" checked onchange="calcularNomina()">Administrativo</label></p>
+                <p><label><input type="radio" name="tipo" id="tipo" value="O" onchange="calcularNomina()">Operativo</label></p>
           <label for="depto">
             <p>Departamento:
                   <select name="depto" id="depto">
@@ -73,9 +71,10 @@
           </p>
         </div>
         <div id="botones">
+          <p><label for="observaciones">Comentarios</label></p>
           <p>
-            <textarea name="observaciones" id="observaciones">
-            </textarea>  
+            <textarea name="observaciones" id="observaciones" cols="34">
+            </textarea>
           </p>
           <p><button onclick="calcularNomina()">Calcular</button>
           <input type="reset" name="limpiar" id="limpiar" value="Limpiar"></p>
