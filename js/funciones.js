@@ -31,25 +31,30 @@ function calcularNomina () {
 
 function generaOptions () {
   const tipo = document.getElementsByName('tipo')
-  const depto = document.getElementsByName('depto')
+  const $depto = document.querySelector('#depto')
+
+  // Primero limpia el select
+  for (let i = $depto.options.length; i >= 0; i--) {
+    $depto.remove(i)
+  }
+  // Dependiendo el tipo seleccionado crea las opciones
   if (tipo[0].checked) {
-    depto.options[0].value = 'COM'
-    depto.options[0].text = 'Compras'
-    depto.options[1].value = 'DIR'
-    depto.options[1].text = 'Dirección'
-    depto.options[2].value = 'INF'
-    depto.options[2].text = 'Informática'
-    depto.options[3].value = 'PER'
-    depto.options[3].text = 'Personal'
-    depto.options[4].value = 'VEN'
-    depto.options[4].text = 'Ventas'
+    agregar($depto, 'COM', 'Compras')
+    agregar($depto, 'DIR', 'Dirección')
+    agregar($depto, 'INF', 'Informática')
+    agregar($depto, 'PER', 'Personal')
+    agregar($depto, 'VEN', 'Ventas')
   } else {
-    depto.options[0].value = 'MAN'
-    depto.options[0].text = 'Mantenimiento'
-    depto.options[1].value = 'MEN'
-    depto.options[1].text = 'Mensajería'
-    depto.options[2].value = 'SER'
-    depto.options[2].text = 'Servicios Generales'
+    agregar($depto, 'MAN', 'Mantenimiento')
+    agregar($depto, 'MEN', 'Mensajería')
+    agregar($depto, 'SER', 'Servicios')
   }
   calcularNomina()
+}
+
+function agregar ($depto, valor, texto) {
+  const option = document.createElement('option')
+  option.value = valor
+  option.text = texto
+  $depto.appendChild(option)
 }

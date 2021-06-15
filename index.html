@@ -49,8 +49,8 @@
             <input type="number" class="numero" name="dias" id="dias" size="5" maxlength="8" value = "15" placeholder="15" required onchange="calcularNomina()">
           </p>
           <p>Tipo Empleado</p>
-                <p><label><input type="radio" name="tipo" id="tipo" value="A" checked onchange="calcularNomina()">Administrativo</label></p>
-                <p><label><input type="radio" name="tipo" id="tipo" value="O" onchange="calcularNomina()">Operativo</label></p>
+                <p><label><input type="radio" name="tipo" id="tipo" value="A" checked onchange="generaOptions()">Administrativo</label></p>
+                <p><label><input type="radio" name="tipo" id="tipo" value="O" onchange="generaOptions()">Operativo</label></p>
           <label for="depto">
             <p>Departamento:
                   <select name="depto" id="depto">
